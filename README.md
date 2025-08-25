@@ -1,4 +1,5 @@
 # Price Tracker & Notifier
+**Note:** This repo contains only the frontend files for demonstration.
 
 Track product prices across Amazon and Flipkart, set target prices, and get instant alerts when the price drops – all in one simple web app.  
 Built using **HTML, CSS, JS, Python, and Google OAuth**. Runs automatically every 30 minutes using a scheduler for near real-time updates.
@@ -28,6 +29,6 @@ Built using **HTML, CSS, JS, Python, and Google OAuth**. Runs automatically ever
 "DM me for full project"
 Email :- shreekantht11@gmail.com
 ph no:- 9035416202
-
+LinkedIn - https://www.linkedin.com/in/shreekanth-t-0bb561281/
 
 
