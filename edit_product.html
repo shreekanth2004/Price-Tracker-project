@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product | PriceTrackr</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dashboard-page edit-page">
+
+    <header class="dashboard-header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <h4 class="logo">PriceTrackr</h4>
+            {% if user %}
+            <div class="user-info">
+                <span>{{ user['name'] }}</span>
+                <img src="{{ user['profile_pic'] }}" alt="Profile Picture" class="profile-pic">
+                <a href="{{ url_for('logout') }}" class="btn btn-sm btn-logout">Logout</a>
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card form-card animate-fade-in">
+                    <div class="card-body">
+                        <h5><i class="fas fa-pen me-2"></i>Edit Target Price</h5>
+                        <hr>
+                        <p class="text-muted edit-product-name"><strong>Product:</strong> {{ product['name'] }}</p>
+                        <form method="POST">
+                            <div class="mb-3">
+                                <label for="target_price" class="form-label">New Target Price (₹)</label>
+                                <input type="number" step="0.01" class="form-control" id="target_price" name="target_price" value="{{ product['target_price'] }}" required>
+                            </div>
+                            <div class="d-flex justify-content-end gap-2 mt-4">
+                                <a href="{{ url_for('products') }}" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Cancel</a>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
