@@ -23,7 +23,11 @@ Built using **HTML, CSS, JS, Python, and Google OAuth**. Runs automatically ever
 - **Web Scraping:** BeautifulSoup, Selenium  
 - **Authentication:** Google OAuth 2.0  
 - **Database:** SQLite 
-- **Scheduler:** Task Scheduler  
+- **Scheduler:** Task Scheduler
+
+"DM me for full project"
+Email :- shreekantht11@gmail.com
+ph no:- 9035416202
 
 
 
